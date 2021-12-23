@@ -313,3 +313,51 @@ input[role="switch"]:disabled:before {
     opacity: 0.8;
   }
 }
+/* desktop */
+@media (min-width: 1024px) {
+  header {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+  .header-wrapper {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1280px;
+    width: 100%;
+    padding: 20px;
+  }
+  main {
+    max-width: 1280px;
+    margin: 0 auto;
+  }
+  .theme-switcher-container {
+    border-top: none;
+  }
+  .theme-switcher-label {
+    display: flex;
+    gap: 1rem;
+  }
+  .content-container {
+    flex-direction: row;
+    justify-content: center;
+  }
+  .big-card {
+    width: 25%;
+  }
+  .big-card.ig {
+    width: 100%;
+  }
+  .overview {
+    flex-wrap: wrap;
+  }
+  .small-card {
+    width: 23%;
+  }
+  .ig-wrap {
+    background: linear-gradient(to right, hsl(37, 97%, 70%), hsl(329, 70%, 58%));
+    border-radius: 8px;
+    width: 25%;
+    height: 100px;
+  }
+}
