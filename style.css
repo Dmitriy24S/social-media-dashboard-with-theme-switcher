@@ -280,6 +280,7 @@ input[role="switch"]::before {
   top: 0.1em;
   background: rgb(255 255 255 / 90%);
   border-radius: 50%;
+  -webkit-transform: translate(30%, 20%);
   transform: translate(30%, 20%);
   -webkit-transition: transform 250ms ease;
   transition: transform 250ms ease;
@@ -300,9 +301,11 @@ input[role="switch"]:focus-visible {
     0 0 0 2px rgba(255, 255, 255, 0.8), 0 0 0 4px var(--bg-checked, var(--bg, rgb(60, 130, 250)));
 }
 input[role="switch"]:checked::before {
+  -webkit-transform: translate(70%, 20%);
   transform: translate(156%, 20%);
 }
 input[role="switch"]:indeterminate::before {
+  -webkit-transform: translate(70%, 20%);
   transform: translate(70%, 20%);
   content: "-";
 }
