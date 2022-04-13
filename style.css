@@ -49,6 +49,7 @@ h4 {
 .dark h4 {
   color: white !important;
 }
+
 /* header */
 header {
   background-color: hsl(225, 100%, 98%);
@@ -90,6 +91,7 @@ header p {
   align-items: center;
   width: 100%;
 }
+
 /* main */
 main {
   position: relative;
