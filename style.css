@@ -10,8 +10,8 @@ body {
   font-family: "Inter", sans-serif;
   font-weight: 700;
   min-width: 320px;
-  -webkit-transition: background-color 0.2s linear;
-  transition: background-color 0.2s linear;
+  /* -webkit-transition: background-color 0.2s linear; */
+  /* transition: background-color 0.2s linear; */
 }
 h1 {
   font-size: 4rem;
@@ -33,21 +33,21 @@ h1,
 h2,
 h3 {
   color: hsl(230, 17%, 14%);
-  -webkit-transition: color 0.2s linear;
-  transition: color 0.2s linear;
+  /* -webkit-transition: color 0.2s linear; */
+  /* transition: color 0.2s linear; */
 }
 h4 {
   color: hsl(228, 12%, 44%);
-  -webkit-transition: color 0.2s linear;
-  transition: color 0.2s linear;
+  /* -webkit-transition: color 0.2s linear; */
+  /* transition: color 0.2s linear; */
 }
 .dark h1,
 .dark h2,
 .dark h3 {
-  color: hsl(0, 0%, 100%);
+  color: hsl(0, 0%, 100%) !important;
 }
 .dark h4 {
-  color: white;
+  color: white !important;
 }
 /* header */
 header {
@@ -55,13 +55,13 @@ header {
   background: hsl(225, 100%, 98%);
   padding: 1.5rem;
   padding-bottom: 5rem;
-  -webkit-transition: background-color 0.2s linear;
-  transition: background-color 0.2s linear;
+  /* -webkit-transition: background-color 0.2s linear; */
+  /* transition: background-color 0.2s linear; */
 }
 header p {
   color: hsl(228, 12%, 44%);
-  -webkit-transition: color 0.2s linear;
-  transition: color 0.2s linear;
+  /* -webkit-transition: color 0.2s linear; */
+  /* transition: color 0.2s linear; */
 }
 .dark header {
   background-color: hsl(232, 19%, 15%);
@@ -130,8 +130,8 @@ main {
   padding: 1.5rem;
   border-radius: 8px;
   padding: 2rem;
-  -webkit-transition: background-color 0.2s linear, color 0.2s linear;
-  transition: background-color 0.2s linear, color 0.2s linear;
+  /* -webkit-transition: background-color 0.2s linear, color 0.2s linear; */
+  /* transition: background-color 0.2s linear, color 0.2s linear; */
 }
 .dark .card {
   background: hsl(227, 47%, 96%);
@@ -241,7 +241,7 @@ footer {
   font-weight: 400;
 }
 .dark footer {
-  color: hsl(228, 34%, 66%);
+  color: hsl(228, 34%, 66%) !important;
 }
 .attribution {
   font-size: 11px;
@@ -259,9 +259,9 @@ input[role="switch"] {
   padding: 0;
   border: none;
   border-radius: 25px;
-  background: hsl(230, 22%, 74%);
+  background: linear-gradient(45deg, #378fe6, #3eda82);
   -webkit-transition: background-color 250ms ease-in, box-shadow 250ms ease;
-  transition: background-color 250ms ease-in, box-shadow 250ms ease;
+  transition: all 250ms ease;
   font-size: 100%;
   -webkit-user-select: none;
   -ms-user-select: none;
@@ -278,31 +278,35 @@ input[role="switch"]::before {
   justify-content: center;
   left: 0;
   top: 0.1em;
-  background: rgb(255 255 255 / 90%);
+  background: rgb(31 29 62 / 90%);
   border-radius: 50%;
   -webkit-transform: translate(30%, 20%);
   transform: translate(30%, 20%);
   -webkit-transition: transform 250ms ease;
-  transition: transform 250ms ease;
+  transition: all 250ms ease;
   color: white;
   line-height: 1;
   top: 0.05em;
   height: 15px;
   width: 15px;
 }
-input[role="switch"]:focus::before {
+input[role="switch"]:checked {
+  background: hsl(230, 22%, 74%);
+}
+input[role="switch"]:checked::before {
+  background: rgba(255, 255, 255, 0.9);
+  -webkit-transform: translate(70%, 20%);
+  transform: translate(156%, 20%);
+}
+input[role="switch"]:checked:focus::before {
   background: rgba(255, 255, 255, 0.9);
 }
-input[role="switch"]:checked {
-  background-color: hsl(174, 86%, 45%);
+input[role="switch"]:focus::before {
+  background: rgb(31 29 62 / 90%);
 }
 input[role="switch"]:focus-visible {
   box-shadow: 0 0.15em 0.25em rgba(0, 0, 0, 0.5) inset, 0 -0.5px 0 rgba(255, 255, 255, 0.2) inset,
     0 0 0 2px rgba(255, 255, 255, 0.8), 0 0 0 4px var(--bg-checked, var(--bg, rgb(60, 130, 250)));
-}
-input[role="switch"]:checked::before {
-  -webkit-transform: translate(70%, 20%);
-  transform: translate(156%, 20%);
 }
 input[role="switch"]:indeterminate::before {
   -webkit-transform: translate(70%, 20%);
@@ -371,3 +375,33 @@ input[role="switch"]:disabled:before {
     height: 100px;
   }
 }
+
+/* @media (prefers-color-scheme: dark) {
+  body {
+    background-color: hsl(230, 17%, 14%);
+  }
+  h1,
+  h2,
+  h3 {
+    color: hsl(0, 0%, 100%);
+  }
+  h4 {
+    color: white;
+  }
+  header {
+    background-color: hsl(232, 19%, 15%);
+    padding: 1.5rem;
+    padding-bottom: 5rem;
+  }
+  header p {
+    color: hsl(228, 34%, 66%);
+  }
+  .card {
+    background: hsl(227, 47%, 96%);
+    background-color: hsl(228, 28%, 20%);
+    color: hsl(228, 34%, 66%);
+  }
+  footer {
+    color: hsl(228, 34%, 66%);
+  }
+} */
