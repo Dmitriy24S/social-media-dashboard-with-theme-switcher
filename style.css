@@ -140,6 +140,7 @@ main {
   background-color: hsl(228, 28%, 20%);
   color: hsl(228, 34%, 66%);
 }
+
 /* big card */
 .big-card {
   display: flex;
@@ -198,6 +199,7 @@ main {
   text-transform: uppercase;
   letter-spacing: 4px;
 }
+
 /* stat style */
 .positive-stat {
   color: hsl(163, 72%, 41%);
@@ -238,6 +240,7 @@ span {
   justify-content: space-between;
   align-items: center;
 }
+
 /* footer */
 footer {
   font-weight: 400;
